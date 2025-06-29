@@ -24,12 +24,10 @@ public class Window extends javax.swing.JFrame {
         this.btnSuma.setContentAreaFilled(false);
         this.btnResta.setOpaque(false);
         this.btnResta.setContentAreaFilled(false);
-           this.btnMulti.setOpaque(false);
+        this.btnMulti.setOpaque(false);
         this.btnMulti.setContentAreaFilled(false);
-           this.btnDiv.setOpaque(false);
+        this.btnDiv.setOpaque(false);
         this.btnDiv.setContentAreaFilled(false);
-
-
         this.btnClean.setOpaque(false);
         this.btnClean.setContentAreaFilled(false);
 
@@ -55,6 +53,7 @@ public class Window extends javax.swing.JFrame {
         btnClean = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setBackground(new java.awt.Color(255, 51, 0));
 
         txtNumUno.setBorder(null);
         txtNumUno.addActionListener(new java.awt.event.ActionListener() {
@@ -62,6 +61,8 @@ public class Window extends javax.swing.JFrame {
                 txtNumUnoActionPerformed(evt);
             }
         });
+
+        txtNumDos.setBorder(null);
 
         btnSuma.setForeground(new java.awt.Color(255, 255, 255));
         btnSuma.setIcon(new javax.swing.ImageIcon(getClass().getResource("/calculadoraapp/img/mas.png"))); // NOI18N
@@ -197,10 +198,8 @@ public class Window extends javax.swing.JFrame {
     }//GEN-LAST:event_btnRestaActionPerformed
 
     private void verified() {
-        if (txtNumUno.getText().isEmpty() && txtNumDos.getText().isEmpty()) {
-
-            JOptionPane.showMessageDialog(rootPane,"INGRESE LOS  VALORES" );
-            return;
+        if (txtNumUno.getText().isEmpty() && txtNumDos.getText().isEmpty() && !Double.isNaN(numOne) && Double.isNaN(numTwo)) {
+            JOptionPane.showMessageDialog(rootPane,"INGRESE LOS  VALORES o numeros" );
         }
     }
 

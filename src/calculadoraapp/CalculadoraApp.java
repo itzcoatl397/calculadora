@@ -4,7 +4,10 @@
  */
 package calculadoraapp;
 
+import calculadoraapp.view.Calculadora;
 import calculadoraapp.view.Window;
+
+import java.awt.*;
 
 /**
  *
@@ -17,9 +20,11 @@ public class CalculadoraApp {
      */
     public static void main(String[] args) {
         // TODO code application logic here
-        Window window = new Window();
-        window.setVisible(true);
-        window.setLocationRelativeTo(null);
+
+        Calculadora calculadora = new Calculadora();
+
+
+
     }
     
 }
